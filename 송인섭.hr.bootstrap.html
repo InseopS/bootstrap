@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+        <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'/>
+        <link rel='stylesheet' href='http://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'/>
+        <title></title>
+    </head>
+    <body>
+        <div class='container-fluid'>
+            <h1 class='d-flex justify-content-center bg-light rounded p-3'>HR</h1>
+
+            <form class='mt-4'>
+                <div class='container-fluid'>
+                    <div class='row'>
+                        <div class='col-2 pl-0'>
+                            <input type='text' class='form-control' placeholder='노동자명'>
+                        </div>
+                        <div class='col-4 pr-4'>
+                            <input type='text' class='form-control' placeholder='입사일'>
+                        </div>
+
+                        <div class='col-2 pl-1 pr-0 d-block'>
+                            <button type='button' class='d-flex justify-content-center btn btn-success btn-sm btn-block'>
+                                <i class='fas fa-plus align-self-center'></i>
+                                <span class='d-none d-md-block my-1'>추가</span>
+                            </button>
+                        </div>
+                        <div class='col-2 pl-1 pr-0 d-block'>
+                            <button type='button' class='d-flex justify-content-center btn btn-info btn-sm btn-block'>
+                                <i class='fas fa-edit align-self-center'></i>
+                                <span class='d-none d-md-block my-1'>수정</span>
+                            </button>
+                        </div>
+                        <div class='col-2 pl-1 pr-0 d-block'>                            
+                            <button type='button' class='d-flex justify-content-center btn btn-warning btn-sm btn-block' data-toggle='modal' data-target='#delModal'>
+                                <i class='fas fa-trash-alt align-self-center align-self-center'></i>
+                                <span class='d-none d-md-block my-1'>삭제</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class='row justify-content-center p-3'>
+                <table class='table table-hover'>
+                    <thead>
+                        <tr><th></th><th>ID</th><th>이름</th><th>입사일</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th><div class='form-check form-check-inline'><input type='radio' class='form-check-input' id='radio1'/></div></th><td>12</td><td>최한석</td><td>2025-05-15</td></tr>
+                        <tr><th><div class='form-check form-check-inline'><input type='radio' class='form-check-input' id='radio1'/></div></th><td>13</td><td>한아름</td><td>2027-07-17</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class='modal fade' id='delModal' tabindex='-1'>
+            <div class='modal-dialog'>
+                <div class='modal-content'>
+                    <div class='modal-header'>
+                        <button type='button' class='close' data-dismiss='modal'>
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class='modal-body'>
+                        <p>노동자를 삭제하시겠습니까?</p>
+                    </div>
+                    <div class='modal-footer'>
+                        <button type='button' class='btn btn-secondary' data-dismiss='modal'>
+                            아니오
+                        </button>
+                        <a href='#' class='btn btn-primary'>예</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
